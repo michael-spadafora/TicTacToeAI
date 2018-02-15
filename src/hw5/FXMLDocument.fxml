@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hw5.FXMLDocumentController">
+  <tabs>
+    <Tab text="controls">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="480.0">
+               <children>
+                  <Line endY="150.0" layoutX="150.0" layoutY="125.0" startY="-100.0" />
+                  <Line endY="150.0" layoutX="250.0" layoutY="125.0" startY="-100.0" />
+                  <Line endY="150.0" layoutX="200.0" layoutY="80.0" rotate="90.0" startY="-100.0" />
+                  <Line endY="150.0" layoutX="200.0" layoutY="170.0" rotate="90.0" startY="-100.0" />
+                  <Button fx:id="box1" layoutX="75.0" layoutY="25.0" mnemonicParsing="false" onAction="#fillBox" prefHeight="70.0" prefWidth="68.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+                  <Button fx:id="box3" layoutX="258.0" layoutY="25.0" mnemonicParsing="false" onAction="#fillBox" prefHeight="70.0" prefWidth="68.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+                  <Button fx:id="box5" layoutX="166.0" layoutY="115.0" mnemonicParsing="false" onAction="#fillBox" prefHeight="70.0" prefWidth="68.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+                  <Button fx:id="box2" layoutX="166.0" layoutY="25.0" mnemonicParsing="false" onAction="#fillBox" prefHeight="70.0" prefWidth="68.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+                  <Button fx:id="box6" layoutX="258.0" layoutY="115.0" mnemonicParsing="false" onAction="#fillBox" prefHeight="70.0" prefWidth="68.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+                  <Button fx:id="box9" layoutX="258.0" layoutY="208.0" mnemonicParsing="false" onAction="#fillBox" prefHeight="70.0" prefWidth="68.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+                  <Button fx:id="box8" layoutX="166.0" layoutY="208.0" mnemonicParsing="false" onAction="#fillBox" prefHeight="70.0" prefWidth="68.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+                  <Button fx:id="box4" layoutX="75.0" layoutY="115.0" mnemonicParsing="false" onAction="#fillBox" prefHeight="70.0" prefWidth="68.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+                  <Button fx:id="box7" layoutX="75.0" layoutY="208.0" mnemonicParsing="false" onAction="#fillBox" prefHeight="70.0" prefWidth="68.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+                  <Text layoutX="437.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="log of actions" />
+                  <TextArea fx:id="actionLog" editable="false" layoutX="373.0" layoutY="50.0" prefHeight="227.0" prefWidth="200.0" />
+                  <Button fx:id="undo" layoutX="447.0" layoutY="285.0" mnemonicParsing="false" onAction="#undoLastTwoMoves" text="undo" />
+                  <Button layoutX="15.0" layoutY="286.0" mnemonicParsing="false" onAction="#newGameComputerFirst" prefHeight="40.0" prefWidth="189.0" text="new game (computer first move)" />
+                  <Button layoutX="215.0" layoutY="286.0" mnemonicParsing="false" onAction="#newGamePlayerFirst" prefHeight="39.0" prefWidth="179.0" text="new game (player first move)" />
+                  <TextField fx:id="outputBox" editable="false" layoutX="15.0" layoutY="332.0" prefHeight="25.0" prefWidth="565.0" text="Welcome! Pick a game type and play with me. I'll be O's youll be X's :)" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="probabilities">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="loseOutputBox" editable="false" layoutX="151.0" layoutY="33.0" />
+                  <TextField fx:id="winOutputBox" editable="false" layoutX="151.0" layoutY="73.0" />
+                  <TextField fx:id="drawOutputBox" editable="false" layoutX="151.0" layoutY="119.0" />
+                  <Text layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="odds of your win" />
+                  <Text layoutX="14.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="odds of computer win" />
+                  <Text layoutX="14.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="odds of draw" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
